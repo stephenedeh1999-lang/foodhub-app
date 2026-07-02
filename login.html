@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔐 Login - FoodHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            padding: 20px;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .login-box .logo {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .login-box h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #2d3436;
+            margin-bottom: 5px;
+        }
+
+        .login-box .subtitle {
+            text-align: center;
+            color: #636e72;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .login-box .subtitle span {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2d3436;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #ff6b6b;
+        }
+
+        .form-group input.error {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #636e72;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .form-options label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #636e72;
+            cursor: pointer;
+        }
+
+        .form-options a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+
+        .form-options a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .login-btn:hover {
+            background: #ee5a24;
+            transform: scale(1.02);
+        }
+
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #636e72;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #dc3545;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: none;
+            border-left: 4px solid #dc3545;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: none;
+            border-left: 4px solid #28a745;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* ===== DEMO CREDENTIALS ===== */
+        .demo-credentials {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            border: 1px dashed #dfe6e9;
+        }
+
+        .demo-credentials strong {
+            color: #2d3436;
+        }
+
+        .demo-credentials .demo-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+
+        .demo-credentials .demo-row span:last-child {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 25px;
+            }
+            .login-box h1 {
+                font-size: 24px;
+            }
+            .form-options {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo -->
+            <div class="logo">🍔</div>
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Login to continue ordering from <span>FoodHub</span></p>
+
+            <!-- Error/Success Messages -->
+            <div class="error-message" id="errorMessage">❌ Invalid credentials</div>
+            <div class="success-message" id="successMessage">✅ Login successful! Redirecting...</div>
+
+            <!-- Demo Credentials -->
+            <div class="demo-credentials">
+                <strong>📝 Demo Credentials</strong>
+                <div class="demo-row">
+                    <span>Email:</span>
+                    <span>demo@foodhub.com</span>
+                </div>
+                <div class="demo-row">
+                    <span>Password:</span>
+                    <span>password123</span>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="email">📧 Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">🔑 Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Enter your password" required />
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                            👁️
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" id="rememberMe" /> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn">🔓 Login</button>
+            </form>
+
+            <p class="signup-link">
+                Don't have an account? <a href="#">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // 🔐 LOGIN PAGE - JavaScript
+        // ============================================================
+
+        // ===== USERS DATABASE (LocalStorage) =====
+        function getUsers() {
+            const users = localStorage.getItem('foodhub_users');
+            return users ? JSON.parse(users) : [];
+        }
+
+        function saveUsers(users) {
+            localStorage.setItem('foodhub_users', JSON.stringify(users));
+        }
+
+        // ===== INITIALIZE WITH DEMO USER =====
+        function initializeUsers() {
+            const users = getUsers();
+            if (users.length === 0) {
+                users.push({
+                    id: 1,
+                    name: 'Demo User',
+                    email: 'demo@foodhub.com',
+                    password: 'password123',
+                    created: new Date().toISOString()
+                });
+                saveUsers(users);
+            }
+        }
+        initializeUsers();
+
+        // ===== TOGGLE PASSWORD VISIBILITY =====
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.querySelector('.toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        }
+
+        // ===== HANDLE LOGIN =====
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const loginBtn = document.getElementById('loginBtn');
+
+            // Reset messages
+            errorMessage.classList.remove('show');
+            successMessage.classList.remove('show');
+
+            // Validation
+            if (!email || !password) {
+                errorMessage.textContent = '❌ Please fill in all fields';
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            // Check credentials
+            const users = getUsers();
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (!user) {
+                errorMessage.textContent = '❌ Invalid email or password';
+                errorMessage.classList.add('show');
+
+                // Shake animation
+                const form = document.getElementById('loginForm');
+                form.style.animation = 'shake 0.5s ease';
+                setTimeout(() => form.style.animation = '', 500);
+
+                return;
+            }
+
+            // Login successful
+            successMessage.textContent = `✅ Welcome back, ${user.name}! Redirecting...`;
+            successMessage.classList.add('show');
+
+            // Save login session
+            localStorage.setItem('foodhub_session', JSON.stringify({
+                userId: user.id,
+                userName: user.name,
+                userEmail: user.email,
+                loggedIn: true,
+                timestamp: new Date().toISOString()
+            }));
+
+            // Disable button
+            loginBtn.disabled = true;
+            loginBtn.textContent = '⏳ Redirecting...';
+
+            // Redirect after 1.5 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+
+        // ===== ADD SHAKE ANIMATION =====
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                20% { transform: translateX(-10px); }
+                40% { transform: translateX(10px); }
+                60% { transform: translateX(-5px); }
+                80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ===== CHECK IF ALREADY LOGGED IN =====
+        window.addEventListener('DOMContentLoaded', function() {
+            const session = localStorage.getItem('foodhub_session');
+            if (session) {
+                try {
+                    const data = JSON.parse(session);
+                    if (data.loggedIn) {
+                        // Redirect to main app
+                        window.location.href = 'index.html';
+                    }
+                } catch (e) {
+                    // Invalid session
+                    localStorage.removeItem('foodhub_session');
+                }
+            }
+
+            // Auto-fill demo credentials
+            document.getElementById('email').value = 'demo@foodhub.com';
+            document.getElementById('password').value = 'password123';
+        });
+
+        // ===== ENTER KEY SUPPORT =====
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const form = document.getElementById('loginForm');
+                if (document.activeElement === document.getElementById('email') ||
+                    document.activeElement === document.getElementById('password')) {
+                    handleLogin(e);
+                }
+            }
+        });
+
+        console.log('🔐 Login page loaded successfully!');
+        console.log(`📦 ${getUsers().length} users registered`);
+    </script>
+</body>
+</html>

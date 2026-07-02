@@ -18,15 +18,6 @@ const menuItems = [
     },
     { 
         id: 2, 
-        name: 'Cheese Burger', 
-        category: 'american', 
-        price: 9.99, 
-        emoji: '🧀', 
-        description: 'Classic burger with double cheese and special sauce',
-        image: 'https://images.unsplash.com/photo-1553970546-53c9aebd7f6f?w=500&h=400&fit=crop'
-    },
-    { 
-        id: 3, 
         name: 'Bacon Burger', 
         category: 'american', 
         price: 10.99, 
@@ -35,7 +26,7 @@ const menuItems = [
         image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=400&fit=crop'
     },
     { 
-        id: 4, 
+        id: 3, 
         name: 'Margherita Pizza', 
         category: 'american', 
         price: 12.99, 
@@ -44,16 +35,7 @@ const menuItems = [
         image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&h=400&fit=crop'
     },
     { 
-        id: 5, 
-        name: 'Pepperoni Pizza', 
-        category: 'american', 
-        price: 14.99, 
-        emoji: '🍕', 
-        description: 'Classic pepperoni with extra cheese on crispy crust',
-        image: 'https://images.unsplash.com/photo-1595853035070-59a39fe84a23?w=500&h=400&fit=crop'
-    },
-    { 
-        id: 6, 
+        id: 4, 
         name: 'French Fries', 
         category: 'american', 
         price: 4.99, 
@@ -62,7 +44,7 @@ const menuItems = [
         image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=500&h=400&fit=crop'
     },
     { 
-        id: 7, 
+        id: 5, 
         name: 'Chicken Wings', 
         category: 'american', 
         price: 11.99, 
@@ -71,7 +53,7 @@ const menuItems = [
         image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=500&h=400&fit=crop'
     },
     { 
-        id: 8, 
+        id: 6, 
         name: 'Chocolate Milkshake', 
         category: 'american', 
         price: 5.99, 
@@ -84,7 +66,7 @@ const menuItems = [
     // 🇳🇬 NIGERIAN FOODS - RICE DISHES
     // ============================================================
     { 
-        id: 9, 
+        id: 7, 
         name: 'Jollof Rice with Chicken', 
         category: 'rice', 
         price: 12.99, 
@@ -93,7 +75,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
     },
     { 
-        id: 10, 
+        id: 8, 
         name: 'Fried Rice with Chicken', 
         category: 'rice', 
         price: 11.99, 
@@ -102,7 +84,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
     },
     { 
-        id: 11, 
+        id: 9, 
         name: 'Ofada Rice with Stew', 
         category: 'rice', 
         price: 13.99, 
@@ -115,16 +97,16 @@ const menuItems = [
     // 🇳🇬 NIGERIAN FOODS - SOUPS
     // ============================================================
     { 
-        id: 12, 
-        name: 'Egusi Soup with Pounded Yam', 
+        id: 10, 
+        name: 'Egusi Soup', 
         category: 'soups', 
-        price: 14.99, 
+        price: 10.99, 
         emoji: '🥣', 
-        description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish - served with pounded yam',
+        description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
     },
     { 
-        id: 13, 
+        id: 11, 
         name: 'Pepper Soup with Catfish', 
         category: 'soups', 
         price: 11.99, 
@@ -133,10 +115,10 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
     },
     { 
-        id: 14, 
-        name: 'Banga Soup with Starch', 
+        id: 12, 
+        name: 'Banga Soup', 
         category: 'soups', 
-        price: 12.99, 
+        price: 10.99, 
         emoji: '🥣', 
         description: 'Rich palm nut soup with assorted meat - a Delta delicacy',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
@@ -146,7 +128,7 @@ const menuItems = [
     // 🇳🇬 NIGERIAN FOODS - SWALLOWS
     // ============================================================
     { 
-        id: 15, 
+        id: 13, 
         name: 'Semo with Egusi Soup', 
         category: 'swallows', 
         price: 13.99, 
@@ -155,7 +137,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
     },
     { 
-        id: 16, 
+        id: 14, 
         name: 'Eba with Ogbono Soup', 
         category: 'swallows', 
         price: 11.99, 
@@ -164,7 +146,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
     },
     { 
-        id: 17, 
+        id: 15, 
         name: 'Amala with Ewedu & Gbegiri', 
         category: 'swallows', 
         price: 12.99, 
@@ -173,7 +155,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
     },
     { 
-        id: 18, 
+        id: 16, 
         name: 'Pounded Yam & Egusi', 
         category: 'swallows', 
         price: 15.99, 
@@ -186,7 +168,7 @@ const menuItems = [
     // 🇳🇬 NIGERIAN FOODS - SNACKS
     // ============================================================
     { 
-        id: 19, 
+        id: 17, 
         name: 'Moi Moi', 
         category: 'snacks', 
         price: 6.99, 
@@ -195,7 +177,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     },
     { 
-        id: 20, 
+        id: 18, 
         name: 'Dodo (Fried Plantain)', 
         category: 'snacks', 
         price: 4.99, 
@@ -204,7 +186,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     },
     { 
-        id: 21, 
+        id: 19, 
         name: 'Suya', 
         category: 'snacks', 
         price: 8.99, 
@@ -213,7 +195,7 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     },
     { 
-        id: 22, 
+        id: 20, 
         name: 'Abacha (African Salad)', 
         category: 'snacks', 
         price: 7.99, 
@@ -226,7 +208,7 @@ const menuItems = [
     // 🇳🇬 NIGERIAN FOODS - DRINKS
     // ============================================================
     { 
-        id: 23, 
+        id: 21, 
         name: 'Zobo Drink', 
         category: 'drinks', 
         price: 3.99, 
@@ -235,18 +217,6 @@ const menuItems = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     }
 ];
-
-// ============================================================
-// 📊 CATEGORY MAPPING
-// ============================================================
-// Map sub-categories to main "african" category for display
-const categoryMap = {
-    'rice': 'african',
-    'soups': 'african',
-    'swallows': 'african',
-    'snacks': 'african',
-    'drinks': 'african'
-};
 
 // ===== STATE =====
 let cart = [];

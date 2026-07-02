@@ -14,7 +14,7 @@ const menuItems = [
         price: 8.99, 
         emoji: '🍔', 
         description: 'Juicy beef patty with lettuce, tomato, and cheese',
-        image: 'https://img.freepik.com/free-photo/tasty-hamburger-with-fresh-vegetables-isolated-white_123827-25822.jpg'
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=400&fit=crop'
     },
     { 
         id: 2, 
@@ -23,7 +23,7 @@ const menuItems = [
         price: 9.99, 
         emoji: '🧀', 
         description: 'Classic burger with double cheese and special sauce',
-        image: 'https://img.freepik.com/free-photo/cheeseburger-with-french-fries_123827-25824.jpg'
+        image: 'https://images.unsplash.com/photo-1553970546-53c9aebd7f6f?w=500&h=400&fit=crop'
     },
     { 
         id: 3, 
@@ -32,7 +32,7 @@ const menuItems = [
         price: 10.99, 
         emoji: '🥓', 
         description: 'With crispy bacon, BBQ sauce, and onion rings',
-        image: 'https://img.freepik.com/free-photo/bacon-burger-with-french-fries_123827-25826.jpg'
+        image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=400&fit=crop'
     },
     { 
         id: 4, 
@@ -41,7 +41,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🍕', 
         description: 'Fresh mozzarella, tomato sauce, and basil on thin crust',
-        image: 'https://img.freepik.com/free-photo/margherita-pizza-with-tomato-basil_123827-25828.jpg'
+        image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&h=400&fit=crop'
     },
     { 
         id: 5, 
@@ -50,7 +50,7 @@ const menuItems = [
         price: 14.99, 
         emoji: '🍕', 
         description: 'Classic pepperoni with extra cheese on crispy crust',
-        image: 'https://img.freepik.com/free-photo/pepperoni-pizza-with-cheese_123827-25830.jpg'
+        image: 'https://images.unsplash.com/photo-1595853035070-59a39fe84a23?w=500&h=400&fit=crop'
     },
     { 
         id: 6, 
@@ -59,7 +59,7 @@ const menuItems = [
         price: 4.99, 
         emoji: '🍟', 
         description: 'Crispy golden fries with special seasoning',
-        image: 'https://img.freepik.com/free-photo/fresh-french-fries_123827-25832.jpg'
+        image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=500&h=400&fit=crop'
     },
     { 
         id: 7, 
@@ -68,7 +68,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🍗', 
         description: 'Spicy buffalo wings with ranch dipping sauce',
-        image: 'https://img.freepik.com/free-photo/chicken-wings-with-dipping-sauce_123827-25834.jpg'
+        image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=500&h=400&fit=crop'
     },
     { 
         id: 8, 
@@ -77,11 +77,11 @@ const menuItems = [
         price: 5.99, 
         emoji: '🥤', 
         description: 'Rich and creamy chocolate milkshake with whipped cream',
-        image: 'https://img.freepik.com/free-photo/chocolate-milkshake-with-whipped-cream_123827-25836.jpg'
+        image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?w=500&h=400&fit=crop'
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN/AFRICAN FAVORITES
+    // 🇳🇬 NIGERIAN/AFRICAN FAVORITES - REAL PHOTOS
     // ============================================================
     { 
         id: 9, 
@@ -90,7 +90,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🍛', 
         description: 'West Africa\'s signature one-pot rice dish with tomatoes, onions, spices and grilled chicken',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/jollof-rice-with-chicken-500x500.jpg'
     },
     { 
         id: 10, 
@@ -99,7 +99,7 @@ const menuItems = [
         price: 14.99, 
         emoji: '🥣', 
         description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish - served with pounded yam',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/egusi-soup-with-pounded-yam-500x500.jpg'
     },
     { 
         id: 11, 
@@ -108,7 +108,7 @@ const menuItems = [
         price: 13.99, 
         emoji: '🍲', 
         description: 'Smooth cassava-based semolina paired with rich egusi soup - a Yoruba delicacy',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/semo-with-egusi-soup-500x500.jpg'
     },
     { 
         id: 12, 
@@ -117,7 +117,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🍲', 
         description: 'Cassava flour swallow served with slimy, flavorful ogbono (wild mango seed) soup',
-        image: 'https://img.freepik.com/free-photo/nigerian-egusi-melon-soup-with-garri-eba-lunch_137916-1925.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/eba-with-ogbono-soup-500x500.jpg'
     },
     { 
         id: 13, 
@@ -126,7 +126,7 @@ const menuItems = [
         price: 13.99, 
         emoji: '🍚', 
         description: 'Local unpolished rice served with spicy ofada stew and assorted meat',
-        image: 'https://img.freepik.com/free-photo/white-boiled-rice-with-spicy-ofada-stew-nigerian-traditional-meal_137916-1907.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/ofada-rice-with-stew-500x500.jpg'
     },
     { 
         id: 14, 
@@ -135,7 +135,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🐟', 
         description: 'Spicy traditional pepper soup with fresh catfish - perfect for cold days',
-        image: 'https://img.freepik.com/free-photo/nigerian-spicy-fish-pepper-soup-bowl_137916-1928.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/pepper-soup-with-catfish-500x500.jpg'
     },
     { 
         id: 15, 
@@ -144,7 +144,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🍲', 
         description: 'Yam flour swallow paired with jute leaf soup and bean puree',
-        image: 'https://img.freepik.com/free-photo/nigerian-amala-ewedu-gbegiri-soup_137916-1930.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/amala-with-ewedu-gbegiri-500x500.jpg'
     },
     { 
         id: 16, 
@@ -153,7 +153,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🍚', 
         description: 'Colorful Nigerian fried rice with mixed vegetables and grilled chicken',
-        image: 'https://img.freepik.com/free-photo/nigerian-fried-rice-with-grilled-chicken_137916-1932.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/fried-rice-with-chicken-500x500.jpg'
     },
     { 
         id: 17, 
@@ -162,7 +162,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🥣', 
         description: 'Rich palm nut soup with assorted meat - a Delta delicacy',
-        image: 'https://img.freepik.com/free-photo/nigerian-banga-soup-with-starch_137916-1934.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/banga-soup-with-starch-500x500.jpg'
     },
     { 
         id: 18, 
@@ -171,7 +171,7 @@ const menuItems = [
         price: 6.99, 
         emoji: '🧆', 
         description: 'Steamed bean pudding with fish, eggs, and spices - a Nigerian favorite',
-        image: 'https://img.freepik.com/free-photo/nigerian-moi-moi-bean-cake_137916-1936.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/moi-moi-500x500.jpg'
     },
     { 
         id: 19, 
@@ -180,7 +180,7 @@ const menuItems = [
         price: 4.99, 
         emoji: '🍌', 
         description: 'Sweet fried ripe plantains - the perfect side dish for any meal',
-        image: 'https://img.freepik.com/free-photo/nigerian-dodo-fried-plantain_137916-1938.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/dodo-fried-plantain-500x500.jpg'
     },
     { 
         id: 20, 
@@ -189,7 +189,7 @@ const menuItems = [
         price: 8.99, 
         emoji: '🥩', 
         description: 'Spicy grilled beef skewers with peanut seasoning - popular street food',
-        image: 'https://img.freepik.com/free-photo/nigerian-suya-spicy-grilled-beef_137916-1940.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/suya-500x500.jpg'
     },
     { 
         id: 21, 
@@ -198,7 +198,7 @@ const menuItems = [
         price: 15.99, 
         emoji: '🍲', 
         description: 'Smooth pounded yam with rich egusi soup and assorted meat',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/pounded-yam-egusi-500x500.jpg'
     },
     { 
         id: 22, 
@@ -207,7 +207,7 @@ const menuItems = [
         price: 7.99, 
         emoji: '🥗', 
         description: 'Cassava-based salad with palm oil, garden eggs, and fish',
-        image: 'https://img.freepik.com/free-photo/abacha-african-salad-cassava-based-dish-igbo-tribe_137916-1942.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/abacha-african-salad-500x500.jpg'
     },
     { 
         id: 23, 
@@ -216,7 +216,7 @@ const menuItems = [
         price: 3.99, 
         emoji: '🍹', 
         description: 'Refreshing hibiscus flower drink with ginger and pineapple',
-        image: 'https://img.freepik.com/free-photo/nigerian-zobo-hibiscus-drink_137916-1944.jpg'
+        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/zobo-drink-500x500.jpg'
     }
 ];
 

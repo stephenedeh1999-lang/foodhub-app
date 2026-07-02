@@ -63,7 +63,7 @@ const menuItems = [
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN FOODS - RICE DISHES
+    // 🇳🇬 NIGERIAN FOODS - RICE DISHES (REAL IMAGES)
     // ============================================================
     { 
         id: 7, 
@@ -72,7 +72,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🍛', 
         description: 'West Africa\'s signature one-pot rice dish with tomatoes, onions, spices and grilled chicken',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2018/11/Jollof-Rice-with-chicken-720x540.jpg'
     },
     { 
         id: 8, 
@@ -81,7 +81,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🍚', 
         description: 'Colorful Nigerian fried rice with mixed vegetables and grilled chicken',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Nigerian-Fried-Rice-720x540.jpg'
     },
     { 
         id: 9, 
@@ -90,11 +90,11 @@ const menuItems = [
         price: 13.99, 
         emoji: '🍚', 
         description: 'Local unpolished rice served with spicy ofada stew and assorted meat',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2018/12/Ofada-Rice-720x540.jpg'
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN FOODS - SOUPS
+    // 🇳🇬 NIGERIAN FOODS - SOUPS (REAL IMAGES)
     // ============================================================
     { 
         id: 10, 
@@ -103,7 +103,7 @@ const menuItems = [
         price: 10.99, 
         emoji: '🥣', 
         description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2018/12/Egusi-soup-720x540.jpg'
     },
     { 
         id: 11, 
@@ -112,7 +112,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🐟', 
         description: 'Spicy traditional pepper soup with fresh catfish - perfect for cold days',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2018/12/Pepper-soup-720x540.jpg'
     },
     { 
         id: 12, 
@@ -121,11 +121,11 @@ const menuItems = [
         price: 10.99, 
         emoji: '🥣', 
         description: 'Rich palm nut soup with assorted meat - a Delta delicacy',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/02/Banga-Soup-720x540.jpg'
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN FOODS - SWALLOWS
+    // 🇳🇬 NIGERIAN FOODS - SWALLOWS (REAL IMAGES)
     // ============================================================
     { 
         id: 13, 
@@ -134,7 +134,7 @@ const menuItems = [
         price: 13.99, 
         emoji: '🍲', 
         description: 'Smooth cassava-based semolina paired with rich egusi soup - a Yoruba delicacy',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Semo-and-Egusi-720x540.jpg'
     },
     { 
         id: 14, 
@@ -143,7 +143,7 @@ const menuItems = [
         price: 11.99, 
         emoji: '🍲', 
         description: 'Cassava flour swallow served with slimy, flavorful ogbono (wild mango seed) soup',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Eba-and-Ogbono-Soup-720x540.jpg'
     },
     { 
         id: 15, 
@@ -152,7 +152,7 @@ const menuItems = [
         price: 12.99, 
         emoji: '🍲', 
         description: 'Yam flour swallow paired with jute leaf soup and bean puree',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Amala-and-Ewedu-720x540.jpg'
     },
     { 
         id: 16, 
@@ -161,11 +161,11 @@ const menuItems = [
         price: 15.99, 
         emoji: '🍲', 
         description: 'Smooth pounded yam with rich egusi soup and assorted meat',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Pounded-Yam-and-Egusi-720x540.jpg'
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN FOODS - SNACKS
+    // 🇳🇬 NIGERIAN FOODS - SNACKS (REAL IMAGES)
     // ============================================================
     { 
         id: 17, 
@@ -174,7 +174,7 @@ const menuItems = [
         price: 6.99, 
         emoji: '🧆', 
         description: 'Steamed bean pudding with fish, eggs, and spices - a Nigerian favorite',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Moi-Moi-720x540.jpg'
     },
     { 
         id: 18, 
@@ -183,7 +183,7 @@ const menuItems = [
         price: 4.99, 
         emoji: '🍌', 
         description: 'Sweet fried ripe plantains - the perfect side dish for any meal',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Dodo-720x540.jpg'
     },
     { 
         id: 19, 
@@ -192,7 +192,7 @@ const menuItems = [
         price: 8.99, 
         emoji: '🥩', 
         description: 'Spicy grilled beef skewers with peanut seasoning - popular street food',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Suya-720x540.jpg'
     },
     { 
         id: 20, 
@@ -201,11 +201,11 @@ const menuItems = [
         price: 7.99, 
         emoji: '🥗', 
         description: 'Cassava-based salad with palm oil, garden eggs, and fish',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Abacha-720x540.jpg'
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN FOODS - DRINKS
+    // 🇳🇬 NIGERIAN FOODS - DRINKS (REAL IMAGES)
     // ============================================================
     { 
         id: 21, 
@@ -214,7 +214,7 @@ const menuItems = [
         price: 3.99, 
         emoji: '🍹', 
         description: 'Refreshing hibiscus flower drink with ginger and pineapple',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+        image: 'https://cheflolaskitchen.com/wp-content/uploads/2019/01/Zobo-Drink-720x540.jpg'
     }
 ];
 
@@ -275,7 +275,6 @@ function renderMenu(category = 'all') {
     } else if (category === 'american') {
         filteredItems = menuItems.filter(item => item.category === 'american');
     } else if (category === 'african') {
-        // Show ALL African dishes (all sub-categories)
         filteredItems = menuItems.filter(item => 
             item.category === 'rice' || 
             item.category === 'soups' || 
@@ -284,7 +283,6 @@ function renderMenu(category = 'all') {
             item.category === 'drinks'
         );
     } else {
-        // Individual sub-category
         filteredItems = menuItems.filter(item => item.category === category);
     }
 
@@ -477,6 +475,4 @@ document.getElementById('checkoutModal').addEventListener('click', function(e) {
 
 console.log('🍛 FoodHub App loaded successfully!');
 console.log(`📦 ${menuItems.length} dishes available`);
-console.log(`🇺🇸 ${menuItems.filter(i => i.category === 'american').length} American dishes`);
-console.log(`🇳🇬 ${menuItems.filter(i => i.category !== 'american').length} African dishes`);
 console.log('💡 Session will clear when tab is closed');

@@ -1,8 +1,8 @@
 // ============================================================
-// 🍛 FOODHUB APP - Complete JavaScript (American + African)
+// 🍛 FOODHUB APP - Complete JavaScript
 // ============================================================
 
-// ===== MENU DATA =====
+// ===== MENU DATA WITH REAL IMAGES =====
 const menuItems = [
     // ============================================================
     // 🍔 AMERICAN FAVORITES
@@ -81,144 +81,172 @@ const menuItems = [
     },
 
     // ============================================================
-    // 🇳🇬 NIGERIAN/AFRICAN FAVORITES - REAL PHOTOS
+    // 🇳🇬 NIGERIAN FOODS - RICE DISHES
     // ============================================================
     { 
         id: 9, 
         name: 'Jollof Rice with Chicken', 
-        category: 'african', 
+        category: 'rice', 
         price: 12.99, 
         emoji: '🍛', 
         description: 'West Africa\'s signature one-pot rice dish with tomatoes, onions, spices and grilled chicken',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/jollof-rice-with-chicken-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
     },
     { 
         id: 10, 
-        name: 'Egusi Soup with Pounded Yam', 
-        category: 'african', 
-        price: 14.99, 
-        emoji: '🥣', 
-        description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish - served with pounded yam',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/egusi-soup-with-pounded-yam-500x500.jpg'
-    },
-    { 
-        id: 11, 
-        name: 'Semo with Egusi Soup', 
-        category: 'african', 
-        price: 13.99, 
-        emoji: '🍲', 
-        description: 'Smooth cassava-based semolina paired with rich egusi soup - a Yoruba delicacy',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/semo-with-egusi-soup-500x500.jpg'
-    },
-    { 
-        id: 12, 
-        name: 'Eba with Ogbono Soup', 
-        category: 'african', 
-        price: 11.99, 
-        emoji: '🍲', 
-        description: 'Cassava flour swallow served with slimy, flavorful ogbono (wild mango seed) soup',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/eba-with-ogbono-soup-500x500.jpg'
-    },
-    { 
-        id: 13, 
-        name: 'Ofada Rice with Stew', 
-        category: 'african', 
-        price: 13.99, 
-        emoji: '🍚', 
-        description: 'Local unpolished rice served with spicy ofada stew and assorted meat',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/ofada-rice-with-stew-500x500.jpg'
-    },
-    { 
-        id: 14, 
-        name: 'Pepper Soup with Catfish', 
-        category: 'african', 
-        price: 11.99, 
-        emoji: '🐟', 
-        description: 'Spicy traditional pepper soup with fresh catfish - perfect for cold days',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/pepper-soup-with-catfish-500x500.jpg'
-    },
-    { 
-        id: 15, 
-        name: 'Amala with Ewedu & Gbegiri', 
-        category: 'african', 
-        price: 12.99, 
-        emoji: '🍲', 
-        description: 'Yam flour swallow paired with jute leaf soup and bean puree',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/amala-with-ewedu-gbegiri-500x500.jpg'
-    },
-    { 
-        id: 16, 
         name: 'Fried Rice with Chicken', 
-        category: 'african', 
+        category: 'rice', 
         price: 11.99, 
         emoji: '🍚', 
         description: 'Colorful Nigerian fried rice with mixed vegetables and grilled chicken',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/fried-rice-with-chicken-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
     },
     { 
-        id: 17, 
+        id: 11, 
+        name: 'Ofada Rice with Stew', 
+        category: 'rice', 
+        price: 13.99, 
+        emoji: '🍚', 
+        description: 'Local unpolished rice served with spicy ofada stew and assorted meat',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jollof_rice_with_grilled_chicken.jpg/640px-Jollof_rice_with_grilled_chicken.jpg'
+    },
+
+    // ============================================================
+    // 🇳🇬 NIGERIAN FOODS - SOUPS
+    // ============================================================
+    { 
+        id: 12, 
+        name: 'Egusi Soup with Pounded Yam', 
+        category: 'soups', 
+        price: 14.99, 
+        emoji: '🥣', 
+        description: 'Rich melon seed soup with vegetables, assorted meat, and stockfish - served with pounded yam',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+    },
+    { 
+        id: 13, 
+        name: 'Pepper Soup with Catfish', 
+        category: 'soups', 
+        price: 11.99, 
+        emoji: '🐟', 
+        description: 'Spicy traditional pepper soup with fresh catfish - perfect for cold days',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+    },
+    { 
+        id: 14, 
         name: 'Banga Soup with Starch', 
-        category: 'african', 
+        category: 'soups', 
         price: 12.99, 
         emoji: '🥣', 
         description: 'Rich palm nut soup with assorted meat - a Delta delicacy',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/banga-soup-with-starch-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Egusi_and_bitter_leaf_soup..jpg/640px-Egusi_and_bitter_leaf_soup..jpg'
+    },
+
+    // ============================================================
+    // 🇳🇬 NIGERIAN FOODS - SWALLOWS
+    // ============================================================
+    { 
+        id: 15, 
+        name: 'Semo with Egusi Soup', 
+        category: 'swallows', 
+        price: 13.99, 
+        emoji: '🍲', 
+        description: 'Smooth cassava-based semolina paired with rich egusi soup - a Yoruba delicacy',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+    },
+    { 
+        id: 16, 
+        name: 'Eba with Ogbono Soup', 
+        category: 'swallows', 
+        price: 11.99, 
+        emoji: '🍲', 
+        description: 'Cassava flour swallow served with slimy, flavorful ogbono (wild mango seed) soup',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
+    },
+    { 
+        id: 17, 
+        name: 'Amala with Ewedu & Gbegiri', 
+        category: 'swallows', 
+        price: 12.99, 
+        emoji: '🍲', 
+        description: 'Yam flour swallow paired with jute leaf soup and bean puree',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semo_and_Egusi.jpg/640px-Semo_and_Egusi.jpg'
     },
     { 
         id: 18, 
-        name: 'Moi Moi', 
-        category: 'african', 
-        price: 6.99, 
-        emoji: '🧆', 
-        description: 'Steamed bean pudding with fish, eggs, and spices - a Nigerian favorite',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/moi-moi-500x500.jpg'
-    },
-    { 
-        id: 19, 
-        name: 'Dodo (Fried Plantain)', 
-        category: 'african', 
-        price: 4.99, 
-        emoji: '🍌', 
-        description: 'Sweet fried ripe plantains - the perfect side dish for any meal',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/dodo-fried-plantain-500x500.jpg'
-    },
-    { 
-        id: 20, 
-        name: 'Suya', 
-        category: 'african', 
-        price: 8.99, 
-        emoji: '🥩', 
-        description: 'Spicy grilled beef skewers with peanut seasoning - popular street food',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/suya-500x500.jpg'
-    },
-    { 
-        id: 21, 
         name: 'Pounded Yam & Egusi', 
-        category: 'african', 
+        category: 'swallows', 
         price: 15.99, 
         emoji: '🍲', 
         description: 'Smooth pounded yam with rich egusi soup and assorted meat',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/pounded-yam-egusi-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+    },
+
+    // ============================================================
+    // 🇳🇬 NIGERIAN FOODS - SNACKS
+    // ============================================================
+    { 
+        id: 19, 
+        name: 'Moi Moi', 
+        category: 'snacks', 
+        price: 6.99, 
+        emoji: '🧆', 
+        description: 'Steamed bean pudding with fish, eggs, and spices - a Nigerian favorite',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+    },
+    { 
+        id: 20, 
+        name: 'Dodo (Fried Plantain)', 
+        category: 'snacks', 
+        price: 4.99, 
+        emoji: '🍌', 
+        description: 'Sweet fried ripe plantains - the perfect side dish for any meal',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
+    },
+    { 
+        id: 21, 
+        name: 'Suya', 
+        category: 'snacks', 
+        price: 8.99, 
+        emoji: '🥩', 
+        description: 'Spicy grilled beef skewers with peanut seasoning - popular street food',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     },
     { 
         id: 22, 
         name: 'Abacha (African Salad)', 
-        category: 'african', 
+        category: 'snacks', 
         price: 7.99, 
         emoji: '🥗', 
         description: 'Cassava-based salad with palm oil, garden eggs, and fish',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/abacha-african-salad-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     },
+
+    // ============================================================
+    // 🇳🇬 NIGERIAN FOODS - DRINKS
+    // ============================================================
     { 
         id: 23, 
         name: 'Zobo Drink', 
-        category: 'african', 
+        category: 'drinks', 
         price: 3.99, 
         emoji: '🍹', 
         description: 'Refreshing hibiscus flower drink with ginger and pineapple',
-        image: 'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/zobo-drink-500x500.jpg'
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg/640px-Plates_of_Egusi_Soup_with_vegetables_and_wrapped_Pounded_Yam.jpg'
     }
 ];
+
+// ============================================================
+// 📊 CATEGORY MAPPING
+// ============================================================
+// Map sub-categories to main "african" category for display
+const categoryMap = {
+    'rice': 'african',
+    'soups': 'african',
+    'swallows': 'african',
+    'snacks': 'african',
+    'drinks': 'african'
+};
 
 // ===== STATE =====
 let cart = [];
@@ -270,22 +298,38 @@ function handleLogout() {
 // ============================================================
 
 function renderMenu(category = 'all') {
-    const filteredItems = category === 'all'
-        ? menuItems
-        : menuItems.filter(item => item.category === category);
+    let filteredItems = [];
+    
+    if (category === 'all') {
+        filteredItems = menuItems;
+    } else if (category === 'american') {
+        filteredItems = menuItems.filter(item => item.category === 'american');
+    } else if (category === 'african') {
+        // Show ALL African dishes (all sub-categories)
+        filteredItems = menuItems.filter(item => 
+            item.category === 'rice' || 
+            item.category === 'soups' || 
+            item.category === 'swallows' || 
+            item.category === 'snacks' || 
+            item.category === 'drinks'
+        );
+    } else {
+        // Individual sub-category
+        filteredItems = menuItems.filter(item => item.category === category);
+    }
 
     if (filteredItems.length === 0) {
-        menuGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px;">No items in this category</p>';
+        menuGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; font-size: 18px; color: #666;">🍽️ No items in this category</p>';
         return;
     }
 
     menuGrid.innerHTML = filteredItems.map(item => `
         <div class="menu-item">
-            <div class="menu-item-image" style="background: #f8f9fa; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 180px; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-size:80px;\\'>${item.emoji}</span>'" />
+            <div class="menu-item-image" style="background: #f8f9fa; display: flex; align-items: center; justify-content: center; overflow: hidden; height: 180px;">
+                <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-size:80px;\\'>${item.emoji}</span>'" />
             </div>
             <div class="menu-item-info">
-                <h3>${item.name}</h3>
+                <h3>${item.emoji} ${item.name}</h3>
                 <p class="description">${item.description}</p>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                     <span class="price">$${item.price.toFixed(2)}</span>
@@ -462,5 +506,7 @@ document.getElementById('checkoutModal').addEventListener('click', function(e) {
 });
 
 console.log('🍛 FoodHub App loaded successfully!');
-console.log(`📦 ${menuItems.length} dishes available (American + African)`);
+console.log(`📦 ${menuItems.length} dishes available`);
+console.log(`🇺🇸 ${menuItems.filter(i => i.category === 'american').length} American dishes`);
+console.log(`🇳🇬 ${menuItems.filter(i => i.category !== 'american').length} African dishes`);
 console.log('💡 Session will clear when tab is closed');

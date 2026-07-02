@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
         /* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         .login-container {
             min-height: 100vh;
             display: flex;
@@ -196,7 +206,6 @@
             display: block;
         }
 
-        /* ===== DEMO CREDENTIALS ===== */
         .demo-credentials {
             background: #f8f9fa;
             padding: 12px 15px;
@@ -221,7 +230,25 @@
             font-weight: bold;
         }
 
-        /* ===== RESPONSIVE ===== */
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(-10px);
+            }
+            40% {
+                transform: translateX(10px);
+            }
+            60% {
+                transform: translateX(-5px);
+            }
+            80% {
+                transform: translateX(5px);
+            }
+        }
+
         @media (max-width: 480px) {
             .login-box {
                 padding: 25px;
@@ -349,39 +376,32 @@
             const successMessage = document.getElementById('successMessage');
             const loginBtn = document.getElementById('loginBtn');
 
-            // Reset messages
             errorMessage.classList.remove('show');
             successMessage.classList.remove('show');
 
-            // Validation
             if (!email || !password) {
                 errorMessage.textContent = '❌ Please fill in all fields';
                 errorMessage.classList.add('show');
                 return;
             }
 
-            // Check credentials
             const users = getUsers();
             const user = users.find(u => u.email === email && u.password === password);
 
             if (!user) {
                 errorMessage.textContent = '❌ Invalid email or password';
                 errorMessage.classList.add('show');
-
-                // Shake animation
                 const form = document.getElementById('loginForm');
                 form.style.animation = 'shake 0.5s ease';
                 setTimeout(() => form.style.animation = '', 500);
-
                 return;
             }
 
-            // Login successful
             successMessage.textContent = `✅ Welcome back, ${user.name}! Redirecting...`;
             successMessage.classList.add('show');
 
-            // Save login session
-            localStorage.setItem('foodhub_session', JSON.stringify({
+            // ✅ SESSION STORAGE - Clears when tab is closed
+            sessionStorage.setItem('foodhub_session', JSON.stringify({
                 userId: user.id,
                 userName: user.name,
                 userEmail: user.email,
@@ -389,42 +409,26 @@
                 timestamp: new Date().toISOString()
             }));
 
-            // Disable button
             loginBtn.disabled = true;
             loginBtn.textContent = '⏳ Redirecting...';
 
-            // Redirect after 1.5 seconds
             setTimeout(() => {
                 window.location.href = 'index.html';
             }, 1500);
         }
 
-        // ===== ADD SHAKE ANIMATION =====
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes shake {
-                0%, 100% { transform: translateX(0); }
-                20% { transform: translateX(-10px); }
-                40% { transform: translateX(10px); }
-                60% { transform: translateX(-5px); }
-                80% { transform: translateX(5px); }
-            }
-        `;
-        document.head.appendChild(style);
-
         // ===== CHECK IF ALREADY LOGGED IN =====
         window.addEventListener('DOMContentLoaded', function() {
-            const session = localStorage.getItem('foodhub_session');
+            // ✅ Check sessionStorage
+            const session = sessionStorage.getItem('foodhub_session');
             if (session) {
                 try {
                     const data = JSON.parse(session);
                     if (data.loggedIn) {
-                        // Redirect to main app
                         window.location.href = 'index.html';
                     }
                 } catch (e) {
-                    // Invalid session
-                    localStorage.removeItem('foodhub_session');
+                    sessionStorage.removeItem('foodhub_session');
                 }
             }
 
@@ -446,6 +450,7 @@
 
         console.log('🔐 Login page loaded successfully!');
         console.log(`📦 ${getUsers().length} users registered`);
+        console.log('💡 Session storage will clear when tab is closed');
     </script>
 </body>
 </html>

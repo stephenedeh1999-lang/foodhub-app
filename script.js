@@ -8,17 +8,14 @@ const menuItems = [
     { id: 1, name: 'Classic Burger', category: 'burgers', price: 8.99, emoji: '🍔', description: 'Juicy beef patty with lettuce, tomato, and cheese' },
     { id: 2, name: 'Cheese Burger', category: 'burgers', price: 9.99, emoji: '🧀', description: 'Classic burger with double cheese' },
     { id: 3, name: 'Bacon Burger', category: 'burgers', price: 10.99, emoji: '🥓', description: 'With crispy bacon and BBQ sauce' },
-
     // Pizza
     { id: 4, name: 'Margherita Pizza', category: 'pizza', price: 12.99, emoji: '🍕', description: 'Fresh mozzarella, tomato sauce, and basil' },
     { id: 5, name: 'Pepperoni Pizza', category: 'pizza', price: 14.99, emoji: '🍕', description: 'Classic pepperoni with extra cheese' },
     { id: 6, name: 'Veggie Pizza', category: 'pizza', price: 13.99, emoji: '🍕', description: 'Bell peppers, mushrooms, olives, and onions' },
-
     // Sushi
     { id: 7, name: 'California Roll', category: 'sushi', price: 15.99, emoji: '🍣', description: 'Crab, avocado, and cucumber roll' },
     { id: 8, name: 'Spicy Tuna Roll', category: 'sushi', price: 16.99, emoji: '🍣', description: 'Tuna with spicy mayo and crunch' },
     { id: 9, name: 'Salmon Nigiri', category: 'sushi', price: 14.99, emoji: '🍣', description: 'Fresh salmon over seasoned rice' },
-
     // Drinks
     { id: 10, name: 'Fresh Lemonade', category: 'drinks', price: 3.99, emoji: '🍋', description: 'Freshly squeezed lemonade' },
     { id: 11, name: 'Iced Coffee', category: 'drinks', price: 4.99, emoji: '☕', description: 'Chilled coffee with milk' },
@@ -37,7 +34,44 @@ const cartCount = document.getElementById('cartCount');
 const cartSidebar = document.getElementById('cartSidebar');
 const cartOverlay = document.getElementById('cartOverlay');
 
-// ===== RENDER MENU =====
+// ============================================================
+// 👤 USER AUTHENTICATION
+// ============================================================
+
+function checkAuth() {
+    const session = sessionStorage.getItem('foodhub_session');
+    if (!session) {
+        window.location.href = 'login.html';
+        return;
+    }
+    try {
+        const data = JSON.parse(session);
+        if (!data.loggedIn) {
+            window.location.href = 'login.html';
+            return;
+        }
+        // Update greeting
+        const greeting = document.getElementById('userGreeting');
+        if (greeting) {
+            greeting.textContent = `👤 Welcome, ${data.userName || 'User'}!`;
+        }
+    } catch (e) {
+        window.location.href = 'login.html';
+    }
+}
+
+function handleLogout() {
+    sessionStorage.removeItem('foodhub_session');
+    showToast('👋 Logged out successfully!');
+    setTimeout(() => {
+        window.location.href = 'login.html';
+    }, 500);
+}
+
+// ============================================================
+// 🍽️ MENU FUNCTIONS
+// ============================================================
+
 function renderMenu(category = 'all') {
     const filteredItems = category === 'all'
         ? menuItems
@@ -73,7 +107,10 @@ document.querySelectorAll('.category-btn').forEach(btn => {
     });
 });
 
-// ===== CART FUNCTIONS =====
+// ============================================================
+// 🛒 CART FUNCTIONS
+// ============================================================
+
 function addToCart(itemId) {
     const item = menuItems.find(i => i.id === itemId);
     const existing = cart.find(i => i.id === itemId);
@@ -116,11 +153,9 @@ function getItemCount() {
 }
 
 function updateCartUI() {
-    // Update count badge
     const count = getItemCount();
     cartCount.textContent = count;
 
-    // Update cart items
     if (cart.length === 0) {
         cartItems.innerHTML = `<p class="empty-cart">🛒 Your cart is empty. Start ordering!</p>`;
     } else {
@@ -140,30 +175,27 @@ function updateCartUI() {
         `).join('');
     }
 
-    // Update total
     cartTotal.textContent = `$${getCartTotal().toFixed(2)}`;
 }
 
-// ===== TOGGLE CART =====
 function toggleCart() {
     cartSidebar.classList.toggle('open');
     cartOverlay.classList.toggle('show');
 }
 
-// ===== CHECKOUT =====
+// ============================================================
+// 📝 CHECKOUT FUNCTIONS
+// ============================================================
+
 function checkout() {
     if (cart.length === 0) {
         showToast('⚠️ Your cart is empty!');
         return;
     }
 
-    // Close cart
     toggleCart();
-
-    // Open checkout modal
     document.getElementById('checkoutModal').classList.add('show');
 
-    // Update order summary
     const summaryContainer = document.getElementById('orderSummaryItems');
     summaryContainer.innerHTML = cart.map(item => `
         <div class="order-summary-item">
@@ -186,7 +218,6 @@ function placeOrder(event) {
     const phone = form.querySelector('input[type="tel"]').value;
     const address = form.querySelector('input[type="text"]:last-of-type').value;
 
-    // Create order
     const order = {
         id: Date.now(),
         items: [...cart],
@@ -195,26 +226,21 @@ function placeOrder(event) {
         timestamp: new Date().toLocaleString()
     };
 
-    // Save to local storage (order history)
     const orders = JSON.parse(localStorage.getItem('orders') || '[]');
     orders.push(order);
     localStorage.setItem('orders', JSON.stringify(orders));
 
-    // Clear cart
     cart = [];
     updateCartUI();
-
-    // Close modal
     closeCheckout();
-
-    // Show success
     showToast(`✅ Order placed successfully! Thank you, ${name}!`);
-
-    // Reset form
     form.reset();
 }
 
-// ===== TOAST NOTIFICATION =====
+// ============================================================
+// 🔔 TOAST NOTIFICATION
+// ============================================================
+
 function showToast(message) {
     const toast = document.getElementById('toast');
     document.getElementById('toastMessage').textContent = message;
@@ -222,9 +248,15 @@ function showToast(message) {
     setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ===== INITIALIZE =====
-renderMenu();
-updateCartUI();
+// ============================================================
+// 🚀 INITIALIZE
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    checkAuth();
+    renderMenu();
+    updateCartUI();
+});
 
 // ===== CLOSE MODAL ON OVERLAY CLICK =====
 document.getElementById('checkoutModal').addEventListener('click', function(e) {
@@ -233,3 +265,4 @@ document.getElementById('checkoutModal').addEventListener('click', function(e) {
 
 console.log('🍔 FoodHub App loaded successfully!');
 console.log(`📦 ${menuItems.length} items available`);
+console.log('💡 Session will clear when tab is closed');

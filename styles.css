@@ -27,6 +27,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .logo {
@@ -44,6 +46,19 @@ header {
 
 .logo-text span {
     color: #ff6b6b;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.user-greeting {
+    color: white;
+    margin-right: 15px;
+    font-size: 14px;
 }
 
 .cart-btn {
@@ -69,6 +84,23 @@ header {
     border-radius: 12px;
     margin-left: 5px;
     font-weight: bold;
+}
+
+.logout-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background: white;
+    color: #2d3436;
 }
 
 /* ===== HERO ===== */
@@ -105,7 +137,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* Category Tabs */
 .category-tabs {
     display: flex;
     gap: 10px;
@@ -134,7 +165,6 @@ header {
     border-color: #ff6b6b;
 }
 
-/* Menu Grid */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -483,45 +513,28 @@ header {
     .category-tabs {
         justify-content: center;
     }
-}
-// ============================================================
-// 👤 USER MANAGEMENT
-// ============================================================
-
-// Check if user is logged in
-function checkAuth() {
-    const session = localStorage.getItem('foodhub_session');
-    if (!session) {
-        window.location.href = 'login.html';
-        return;
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    try {
-        const data = JSON.parse(session);
-        if (!data.loggedIn) {
-            window.location.href = 'login.html';
-            return;
-        }
-        // Update greeting
-        const greeting = document.getElementById('userGreeting');
-        if (greeting) {
-            greeting.textContent = `👤 Welcome, ${data.userName || 'User'}!`;
-        }
-    } catch (e) {
-        window.location.href = 'login.html';
+    .user-greeting {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    .logout-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+        margin-left: 5px;
     }
 }
 
-// Handle logout
-function handleLogout() {
-    localStorage.removeItem('foodhub_session');
-    showToast('👋 Logged out successfully!');
-    setTimeout(() => {
-        window.location.href = 'login.html';
-    }, 500);
+@media (max-width: 480px) {
+    .header-actions {
+        justify-content: center;
+    }
+    .cart-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
 }
-
-// ===== CALL AUTH CHECK ON LOAD =====
-// Add this at the end of the file or call it after initialization
-document.addEventListener('DOMContentLoaded', function() {
-    checkAuth();
-});
